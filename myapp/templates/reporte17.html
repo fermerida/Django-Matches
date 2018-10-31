@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<!--
+	Horizons by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+{% load staticfiles %}
+	<head>
+		<title>Reportes</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/skel-layers.min.js' %}"></script>
+		<script src="{% static 'js/init.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/skel.css' %}" type="text/css"/>
+    	<link rel="stylesheet" href="{% static 'css/style2.css' %}" type="text/css"/>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	</head>
+	<body class="homepage" onload="nobackbutton();">
+
+		<!-- Header -->
+			<div id="header">
+				<div class="container">
+
+					<!-- Logo -->
+						<h2>Renderizado de reporte 17</h2>
+						<form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    	<!--<input type="text" name="user" placeholder="username" required="required" />
+        <input type="password" name="contra" placeholder="password" required="required" />-->
+        <button type="submit" class="btn btn-primary btn-block btn-large">Buscar</button>
+        <br><br><br><br><br>
+
+    </form>
+    <table class="w3-table-all w3-centered" >
+ 						<tr class="w3-red"> 
+ 							<th>Estadio</th>
+ 							<th>Fecha</th>
+ 							<th>Local</th>
+ 							<th>Visita</th>
+ 						</tr>
+						{%for a, b ,c , d in result%}
+						<tr class="w3-green w3-hover-blue">
+							<td>
+							{{a}}
+							</td>
+							<td>
+							{{b}}
+							</td>
+							<td>
+							{{c}}
+							</td>
+							<td>
+							{{d}}</td>													
+						</tr>
+						{%endfor%}
+						</table>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>								
+								<li><a href="{%url 'clientem'%}">Go back</a></li>															
+								<li>
+									<h2>Manejo de sesion</h2>
+									<ul>
+										<li><a href="{%url 'index'%}">Cerrar sesion</a></li>
+									</ul>
+								</li>																			
+							</ul>
+						</nav>						
+						
+					<!-- Banner -->
+						<div id="banner">
+							<div class="container">
+								<section>
+									<header class="major">
+										<h2>{{ mensaje }}</h2>
+									</header>
+								</section>
+							</div>
+						</div>
+
+				</div>
+			</div>
+
+	</body>
+</html>

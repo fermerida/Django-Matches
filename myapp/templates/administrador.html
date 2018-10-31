@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<!--
+	Horizons by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+{% load staticfiles %}
+	<head>
+		<title>Pagina principal administrador</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/skel-layers.min.js' %}"></script>
+		<script src="{% static 'js/init.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/skel.css' %}" type="text/css"/>
+    	<link rel="stylesheet" href="{% static 'css/style2.css' %}" type="text/css"/>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="homepage" onload="nobackbutton();">
+		<!-- Preloader -->
+
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--End off Preloader -->
+<header>
+            
+
+            <!-- Navbar -->
+            <nav class="navbar bootsnav">
+               
+                <div class="container">
+                    <!-- Atribute Navigation -->
+                    <div class="attr-nav">
+                      
+                    </div>
+                   
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav menu">
+                            <li><a>Bienvenido   </a><a href="#about">{{user}}</a></li>                    
+                            
+                        </ul>
+                    </div>
+                </div>   
+            </nav><!-- Navbar end -->
+        </header><!-- Header end -->
+		<!-- Header -->
+		<!-- Header -->
+			<div id="header">
+				<div class="container">
+
+					<!-- Logo -->
+					
+						<h0>ADMINISTRADOR</h0>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li>
+									<h2>CRUD</h2>
+									<ul>
+										<li><a href="{%url 'crud_eliminar'%}">Eliminar Cuenta</a></li>
+										<li><a href="{%url 'crud_congelar'%}">Congelar Cuenta</a></li>
+										<li><a href="{%url 'crud_mod'%}">Actualizar Cuenta</a></li>
+									</ul>
+								<li>
+									<h2>Manejo de sesion</h2>
+									<ul>
+										<li><a>Ver perfil</a></li>
+										<li><a>Cerrar sesion</a></li>
+									</ul>
+								</li>
+								<li>
+                                    <h2>Seccion de reportes</h2>
+                                    <ul>
+										<li><a href="{%url 'areporte1'%}">1)Usuarios Suscritos a X equipo</a></li>
+                                        <li><a href="{%url 'areporte2'%}">2)Usuarios Con o Sin Membresía</a></li>
+                                        <li><a href="{%url 'areporte3'%}">3)Usuarios que Mas membresías han adquirido</a></li>
+                                        <li><a href="{%url 'areporte4'%}">4)Usuarios que más dinero han gastado</a></li>
+                                        <li><a href="{%url 'areporte5'%}">5)Usuarios de X País</a></li>
+                                        <li><a href="{%url 'areporte6'%}">6)Usuarios de X genero</a></li>
+                                        <li><a href="{%url 'areporte7'%}">7)Usuarios con al menos X años de edad</a></li>
+                                        <li><a href="{%url 'areporte8'%}">8)Empleados que MAS/MENOS noticias han publicado</a></li>
+                                        <li><a href="{%url 'areporte9'%}">9)Empleados que MAS/MENOS noticias han publicado de X Equipo</a></li>
+                                        <li><a href="{%url 'areporte10'%}">10)Bitácoras de los administradores.</a></li>
+									</ul>
+                                </li>								
+							</ul>
+						</nav>
+
+
+					<!-- Banner -->
+						<div id="banner">
+							<div class="container">
+								<section>
+									<header class="major">
+										<h2>{{ mensaje }}</h2>
+									</header>
+								</section>
+							</div>
+						</div>
+
+				</div>
+			</div>
+<br><br><br>
+
+	</body>
+</html>
